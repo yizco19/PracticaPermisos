@@ -104,7 +104,9 @@ class MainActivity : AppCompatActivity() {
             //se trata la devolucion desde una función anónima
             {
                 var image = it
-                adaptador.add(image?.let { it1 -> Entrada(it1, lastlocation) })
+                if(image != null){
+                    adaptador.add(image?.let { it1 -> Entrada(it1, lastlocation) })
+                }
 
 
             }
